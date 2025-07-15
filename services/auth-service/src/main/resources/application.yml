@@ -1,0 +1,23 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/helpnest_shared
+    username: postgres
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  application:
+    name: auth-service
+jwt:
+  secret: rCl2tEnX2fYlrukG24WVleTBTpuwmv1ONj8nCml6tlY=
+  expiration: 86400000 # 1 day in milliseconds
+user-service:
+  url: http://localhost:8082
+
